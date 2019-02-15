@@ -1,0 +1,6 @@
+framework module Pods_Sleek {
+  umbrella header "Pods-Sleek-umbrella.h"
+
+  export *
+  module * { export * }
+}
