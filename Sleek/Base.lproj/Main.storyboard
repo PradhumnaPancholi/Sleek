@@ -1,24 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Reveal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="LRE-3j-Xto" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="mGK-fP-lhm"/>
+                        <segue destination="ZVE-FI-Lb9" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="rWz-0C-CiC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-375" y="144"/>
+        </scene>
+        <!--ChatVC-->
+        <scene sceneID="Nwm-cr-arz">
+            <objects>
+                <viewController id="LRE-3j-Xto" customClass="ChatVC" customModule="Sleek" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wdG-hE-JZN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3cZ-JC-r1E">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sleek" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvw-2e-Sga">
+                                        <rect key="frame" x="158" y="43" width="61" height="40"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3O-1Q-5vj">
+                                        <rect key="frame" x="8" y="45" width="37" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="229-xC-pC6"/>
+                                            <constraint firstAttribute="width" constant="37" id="9nw-Lt-BP6"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="hamburger_menu"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.24647887323943662" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Nvw-2e-Sga" firstAttribute="centerY" secondItem="C3O-1Q-5vj" secondAttribute="centerY" id="9YU-GU-pPt"/>
+                                    <constraint firstAttribute="bottom" secondItem="C3O-1Q-5vj" secondAttribute="bottom" constant="8" id="Qna-fd-f5k"/>
+                                    <constraint firstAttribute="height" constant="90" id="RKx-px-sUg"/>
+                                    <constraint firstItem="C3O-1Q-5vj" firstAttribute="leading" secondItem="3cZ-JC-r1E" secondAttribute="leading" constant="8" id="TFq-Vf-XOr"/>
+                                    <constraint firstItem="Nvw-2e-Sga" firstAttribute="leading" secondItem="3cZ-JC-r1E" secondAttribute="leading" constant="158" id="mMF-XM-jx3"/>
+                                    <constraint firstItem="Nvw-2e-Sga" firstAttribute="top" secondItem="3cZ-JC-r1E" secondAttribute="top" constant="43" id="xxT-JH-T4u"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3cZ-JC-r1E" firstAttribute="top" secondItem="wdG-hE-JZN" secondAttribute="top" id="cVI-MQ-vBU"/>
+                            <constraint firstItem="3cZ-JC-r1E" firstAttribute="trailing" secondItem="1Ld-dc-8wi" secondAttribute="trailing" id="swI-3H-Asm"/>
+                            <constraint firstItem="3cZ-JC-r1E" firstAttribute="leading" secondItem="1Ld-dc-8wi" secondAttribute="leading" id="vm5-FK-fcq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Ld-dc-8wi"/>
+                    </view>
+                    <connections>
+                        <outlet property="menu" destination="C3O-1Q-5vj" id="xhV-FD-JXZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vm2-gP-KgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="581.60000000000002" y="-378.26086956521743"/>
+        </scene>
+        <!--ChannelVC-->
+        <scene sceneID="KTz-yc-NQy">
+            <objects>
+                <viewController id="ZVE-FI-Lb9" customClass="ChannelVC" customModule="Sleek" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JrD-Op-HTV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hRx-GL-Rl5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xz7-Ph-7fn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="582" y="461"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hamburger_menu" width="312" height="312"/>
+    </resources>
 </document>

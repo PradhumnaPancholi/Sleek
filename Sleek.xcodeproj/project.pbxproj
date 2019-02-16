@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		0FEB29D7B7C43D3A15F5C6AB /* Pods_Sleek.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2945BF84476A8B682003B1 /* Pods_Sleek.framework */; };
 		45084DAC2217043300196D4B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45084DAA2217043300196D4B /* SWRevealViewController.m */; };
+		45084DB1221723F000196D4B /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45084DB0221723F000196D4B /* ChatVC.swift */; };
+		45084DB32217249D00196D4B /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45084DB22217249D00196D4B /* ChannelVC.swift */; };
 		4554F131221572BD0042AEE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4554F130221572BD0042AEE7 /* AppDelegate.swift */; };
-		4554F133221572BD0042AEE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4554F132221572BD0042AEE7 /* ViewController.swift */; };
 		4554F136221572BD0042AEE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4554F134221572BD0042AEE7 /* Main.storyboard */; };
 		4554F138221572BD0042AEE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4554F137221572BD0042AEE7 /* Assets.xcassets */; };
 		4554F13B221572BD0042AEE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4554F139221572BD0042AEE7 /* LaunchScreen.storyboard */; };
@@ -20,9 +21,10 @@
 		45084DA92217043200196D4B /* Sleek-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sleek-Bridging-Header.h"; sourceTree = "<group>"; };
 		45084DAA2217043300196D4B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		45084DAB2217043300196D4B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		45084DB0221723F000196D4B /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		45084DB22217249D00196D4B /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		4554F12D221572BD0042AEE7 /* Sleek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sleek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4554F130221572BD0042AEE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4554F132221572BD0042AEE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4554F135221572BD0042AEE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4554F137221572BD0042AEE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4554F13A221572BD0042AEE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,6 +73,29 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		45084DAD2217236F00196D4B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		45084DAE2217237D00196D4B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		45084DAF2217238800196D4B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				45084DB0221723F000196D4B /* ChatVC.swift */,
+				45084DB22217249D00196D4B /* ChannelVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		4554F124221572BD0042AEE7 = {
 			isa = PBXGroup;
 			children = (
@@ -92,9 +117,11 @@
 		4554F12F221572BD0042AEE7 /* Sleek */ = {
 			isa = PBXGroup;
 			children = (
+				45084DAF2217238800196D4B /* Controller */,
+				45084DAE2217237D00196D4B /* View */,
+				45084DAD2217236F00196D4B /* Model */,
 				45084DA8221703E400196D4B /* Supporting Files */,
 				4554F130221572BD0042AEE7 /* AppDelegate.swift */,
-				4554F132221572BD0042AEE7 /* ViewController.swift */,
 				4554F134221572BD0042AEE7 /* Main.storyboard */,
 				4554F137221572BD0042AEE7 /* Assets.xcassets */,
 				4554F139221572BD0042AEE7 /* LaunchScreen.storyboard */,
@@ -222,7 +249,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4554F133221572BD0042AEE7 /* ViewController.swift in Sources */,
+				45084DB32217249D00196D4B /* ChannelVC.swift in Sources */,
+				45084DB1221723F000196D4B /* ChatVC.swift in Sources */,
 				4554F131221572BD0042AEE7 /* AppDelegate.swift in Sources */,
 				45084DAC2217043300196D4B /* SWRevealViewController.m in Sources */,
 			);
