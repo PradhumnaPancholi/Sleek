@@ -48,11 +48,14 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3O-1Q-5vj">
                                         <rect key="frame" x="8" y="45" width="37" height="37"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="229-xC-pC6"/>
                                             <constraint firstAttribute="width" constant="37" id="9nw-Lt-BP6"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="hamburger_menu"/>
+                                        <state key="normal" title="Button" image="hamburger_menu">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.24647887323943662" alpha="1" colorSpace="calibratedRGB"/>
@@ -75,7 +78,7 @@
                         <viewLayoutGuide key="safeArea" id="1Ld-dc-8wi"/>
                     </view>
                     <connections>
-                        <outlet property="menu" destination="C3O-1Q-5vj" id="xhV-FD-JXZ"/>
+                        <outlet property="menuBtn" destination="C3O-1Q-5vj" id="Qb6-jX-I9L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vm2-gP-KgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
