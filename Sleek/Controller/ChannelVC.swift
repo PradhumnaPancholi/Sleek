@@ -15,8 +15,9 @@ class ChannelVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+    //to load login View/Screen //
     @IBAction func loginBtnPressed(_ sender: Any) {
         performSegue(withIdentifier: TO_Login, sender: nil)
     }
+    
 }
