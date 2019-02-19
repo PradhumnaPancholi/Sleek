@@ -22,7 +22,7 @@ class ChatVC: UIViewController {
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         //To add "Tap" gesture to close SideBar//
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-        
+      
     }
 
 }
