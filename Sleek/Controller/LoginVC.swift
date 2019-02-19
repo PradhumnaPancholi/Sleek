@@ -19,4 +19,9 @@ class LoginVC: UIViewController {
         dismiss(animated: true, completion: nil)
         
     }
+    
+    //to load Create Account VC//
+    @IBAction func createAccountPressed(_ sender: Any) {
+        performSegue(withIdentifier: TO_Create_Account, sender: nil)
+    }
 }

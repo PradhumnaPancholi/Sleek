@@ -8,4 +8,6 @@
 
 import Foundation
 
+//segues//
 let TO_Login = "toLogin"
+let TO_Create_Account = "toCreateAccount"
