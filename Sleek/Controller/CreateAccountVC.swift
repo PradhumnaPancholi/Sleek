@@ -18,7 +18,8 @@ class CreateAccountVC: UIViewController {
 
     //to dismiss Create Account View and load back to Channel View//
     @IBAction func closeBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: UNWIND, sender: nil)
+        //need to fix this with unwind segue for better UX//
+        dismiss(animated: true, completion: nil)
     }
     
 
