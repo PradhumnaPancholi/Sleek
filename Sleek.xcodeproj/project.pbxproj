@@ -19,6 +19,7 @@
 		4554F138221572BD0042AEE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4554F137221572BD0042AEE7 /* Assets.xcassets */; };
 		4554F13B221572BD0042AEE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4554F139221572BD0042AEE7 /* LaunchScreen.storyboard */; };
 		45B5BBB2221B7DA0007EA430 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B5BBB1221B7DA0007EA430 /* Contants.swift */; };
+		45D964C32220622200F4B62A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D964C22220622200F4B62A /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		4554F13A221572BD0042AEE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4554F13C221572BD0042AEE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45B5BBB1221B7DA0007EA430 /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
+		45D964C22220622200F4B62A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		4F2945BF84476A8B682003B1 /* Pods_Sleek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sleek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC43CAB8E0737B63C3BB8BA /* Pods-Sleek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleek.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sleek/Pods-Sleek.debug.xcconfig"; sourceTree = "<group>"; };
 		A8F94C40C59EA88B947D1B8A /* Pods-Sleek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleek.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sleek/Pods-Sleek.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,7 +112,6 @@
 		4554F124221572BD0042AEE7 = {
 			isa = PBXGroup;
 			children = (
-				45B5BBB0221B7D7B007EA430 /* Utilities */,
 				4554F12F221572BD0042AEE7 /* Sleek */,
 				4554F12E221572BD0042AEE7 /* Products */,
 				18E5757A203A726F6A36AA70 /* Pods */,
@@ -129,6 +130,8 @@
 		4554F12F221572BD0042AEE7 /* Sleek */ = {
 			isa = PBXGroup;
 			children = (
+				45D964C1222061D200F4B62A /* Services */,
+				45B5BBB0221B7D7B007EA430 /* Utilities */,
 				45084DAF2217238800196D4B /* Controller */,
 				45084DAE2217237D00196D4B /* View */,
 				45084DAD2217236F00196D4B /* Model */,
@@ -148,6 +151,14 @@
 				45B5BBB1221B7DA0007EA430 /* Contants.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		45D964C1222061D200F4B62A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				45D964C22220622200F4B62A /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +286,7 @@
 				4542E2D2221C04D8007A0FBB /* LoginVC.swift in Sources */,
 				4554F131221572BD0042AEE7 /* AppDelegate.swift in Sources */,
 				45084DAC2217043300196D4B /* SWRevealViewController.m in Sources */,
+				45D964C32220622200F4B62A /* AuthService.swift in Sources */,
 				4535C0EC2217FA0300DDC5EE /* BGGradient.swift in Sources */,
 				45B5BBB2221B7DA0007EA430 /* Contants.swift in Sources */,
 			);

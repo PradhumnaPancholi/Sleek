@@ -11,3 +11,10 @@ import Foundation
 //segues//
 let TO_Login = "toLogin"
 let TO_Create_Account = "toCreateAccount"
+let UNWIND = "Unwind_Seague"
+
+//Auth Keys
+var LOGGED_IN_KEY = "login"
+var TOKEN_KEY = "token"
+var USER_EMAIL = "userEmail"
+
