@@ -294,7 +294,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -317,6 +317,9 @@
                                 <state key="normal" title="Choose avatar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseAvtarPressed:" destination="xpA-4W-VKQ" eventType="touchUpInside" id="HU7-tp-cSI"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user (1)" translatesAutoresizingMaskIntoConstraints="NO" id="Vvy-6Z-caS">
                                 <rect key="frame" x="165" y="380" width="45" height="45"/>
@@ -335,6 +338,9 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountPressed:" destination="xpA-4W-VKQ" eventType="touchUpInside" id="gt3-8c-7ao"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -354,6 +360,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0MZ-GY-dnO"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTxt" destination="bBE-oS-fFS" id="IKA-PR-TmK"/>
+                        <outlet property="passwordTxt" destination="iPp-BX-KMH" id="psk-IK-egk"/>
+                        <outlet property="userImg" destination="Vvy-6Z-caS" id="eBo-6e-4Sg"/>
+                        <outlet property="userNameTxt" destination="zhE-El-ITL" id="QKL-dX-4eQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t3N-0A-P7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

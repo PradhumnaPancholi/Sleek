@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class AuthService {
     
@@ -40,5 +41,38 @@ class AuthService {
         set {
             defaults.set(newValue, forKey: USER_EMAIL)
         }
+    }
+    
+    //function to make request to the API to register a new user//
+
+    func registerUser(email: String, password: String, completion: @escaping CompletionHandler ) {
+   
+        //to prepare data for request//
+        
+        //to turn email into lowercase//
+        let lowerCaseEmail = email.lowercased()
+        //for header//
+        let header = [
+            "Content-Type": "Application/JSON; charset = utf-8"
+        ]
+        //for data that will be sent in request//
+        let body: [String: Any] = [
+            "email": lowerCaseEmail,
+            "password": password
+        ]
+        
+        //to make request//
+        Alamofire.request(REGISTER_USER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseString { (response) in
+            if response.error == nil{
+                completion(true)
+            }
+            else{
+                completion(false)
+                debugPrint(response.result.error as Any?)
+            }
+        }
+        
+        
+        
     }
 }

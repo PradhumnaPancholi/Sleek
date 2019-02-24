@@ -13,8 +13,15 @@ let TO_Login = "toLogin"
 let TO_Create_Account = "toCreateAccount"
 let UNWIND = "Unwind_Seague"
 
-//Auth Keys
+//User Defaults//
 var LOGGED_IN_KEY = "login"
 var TOKEN_KEY = "token"
 var USER_EMAIL = "userEmail"
+
+//---------------------------------------------//
+typealias CompletionHandler  =  (_ Success: Bool) -> ()
+
+//URL Constants//
+let BASE_URL = "https://sleek777.herokuapp.com/v1/"
+let REGISTER_USER = "\(BASE_URL)account/register"
 
