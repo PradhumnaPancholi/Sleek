@@ -84,7 +84,7 @@ class AuthService {
             "password": password
         ]
         
-        //to make request to login a user//
+        //to make API request to login a user//
         Alamofire.request(LOGIN_URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON{
             	(response) in
                 /*if response.result.error == nil {
@@ -112,6 +112,47 @@ class AuthService {
                 }
             }
      }
-
+    
+    //function to make an API request create a new user//
+    func createUser(name: String, email: String, avatarName: String, avatarColor: String, completion: @escaping CompletionHandler) {
+        
+        //for required data/ to make API request/
+        let lowerCaseEmail = email.lowercased()
+        
+        let body: [String: Any] = [
+            "name": name,
+            "email": lowerCaseEmail,
+            "avatarName": avatarName,
+            "avatarColor": avatarColor,
+            
+        ]
+        
+        let header = [
+            "Content-Type": "Application/JSON; charset = utf-8",
+            "Authorization": "Bearer \(self.authToken)"
+         ]
+        
+        //to make actual API request//
+        Alamofire.request(ADD_USER_URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
+            if response.result.error == nil{
+                guard let data = response.data else {return}
+                let json = try! JSON(data: data)
+                let id = json["_id"].stringValue
+                let name = json["name"].stringValue
+                let email = json["email"].stringValue
+                let aColor = json["avatorColor"].stringValue
+                let aName = json["avatarName"].stringValue
+                
+                //to save  UserData//
+                UserDataServices.instance.setUserData(id: id, name: name, email: email, avatarName: aName, avatarColor: aColor)
+                completion(true)
+            }
+            else {
+                completion(false)
+                print(response.result.error as Any)
+            }
+        }
+    
+    }
     
 }

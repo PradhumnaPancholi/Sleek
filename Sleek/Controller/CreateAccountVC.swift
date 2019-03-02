@@ -16,6 +16,11 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var userImg: UIImageView!
     
+    
+    //variables//
+    var avatarName = "user"
+    var avatarColor = "[0.5,05,0.5,1]"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,6 +34,9 @@ class CreateAccountVC: UIViewController {
     @IBAction func createAccountPressed(_ sender: Any) {
         
         //to get data for parameters from textfield (with a check to handle exceptions)//
+        guard let userName = userNameTxt.text, userNameTxt.text != "" else {
+            return
+        }
         guard let email = emailTxt.text, emailTxt.text != "" else {
             return
         }
@@ -42,6 +50,9 @@ class CreateAccountVC: UIViewController {
                     AuthService.instance.loginUser(email: email, password: password, completion: { (success) in
                         if success {
                             print("Loggen in")
+                            AuthService.instance.createUser(name: userName, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
+                                print("User created")
+                            })
                         }
                     })
                     print("Registered User")
