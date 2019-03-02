@@ -85,8 +85,8 @@ class AuthService {
         ]
         
         //to make request to login a user//
-        Alamofire.request(LOGIN_URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON
-            { (response) in
+        Alamofire.request(LOGIN_URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON{
+            	(response) in
                 /*if response.result.error == nil {
                     if let json = response.result.error as? Dictionary<String, Any> {
                         if let email = json["user"] as? String{
@@ -98,18 +98,19 @@ class AuthService {
                     }
                 }*/
                 
-                if response.result.error == nil{
+               if response.result.error == nil{
                     guard let data = response.data else {return}
                     let json = try! JSON(data: data)
                     self.userEmail = json["user"].stringValue
                     self.authToken = json["token"].stringValue
                     self.isLoggedin = true
+                    completion(true)
                 }
                 else{
                     completion(false)
                     debugPrint(response.result.error as Any)
                 }
-        }
+            }
      }
 
     
