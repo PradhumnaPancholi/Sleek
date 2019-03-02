@@ -342,9 +342,18 @@
                                     <action selector="createAccountPressed:" destination="xpA-4W-VKQ" eventType="touchUpInside" id="gt3-8c-7ao"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdE-3x-VrT">
+                                <rect key="frame" x="89" y="460" width="197" height="36"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Choose background color">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="HdE-3x-VrT" firstAttribute="top" secondItem="Vvy-6Z-caS" secondAttribute="bottom" constant="35" id="2E1-An-tNU"/>
+                            <constraint firstItem="HdE-3x-VrT" firstAttribute="centerX" secondItem="XbB-vl-IyZ" secondAttribute="centerX" id="4Ms-rt-ohL"/>
                             <constraint firstItem="0MZ-GY-dnO" firstAttribute="trailing" secondItem="6rg-q5-BxL" secondAttribute="trailing" constant="27" id="6hw-nF-tTb"/>
                             <constraint firstItem="Vvy-6Z-caS" firstAttribute="centerX" secondItem="XbB-vl-IyZ" secondAttribute="centerX" id="H7x-vM-cRJ"/>
                             <constraint firstItem="o5w-WF-Qp9" firstAttribute="centerX" secondItem="XbB-vl-IyZ" secondAttribute="centerX" id="PBu-uh-9Ot"/>
