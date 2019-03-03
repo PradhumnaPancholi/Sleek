@@ -12,6 +12,7 @@ import Foundation
 let TO_Login = "toLogin"
 let TO_Create_Account = "toCreateAccount"
 let UNWIND = "Unwind_Seague"
+let TO_Avatar_Picker = "toAvatarPicker"
 
 //User Defaults//
 var LOGGED_IN_KEY = "logged in"

@@ -28,6 +28,8 @@ class CreateAccountVC: UIViewController {
     }
     
     @IBAction func chooseAvtarPressed(_ sender: Any) {
+        //to oerform segue to AvatarPickerVC//
+        performSegue(withIdentifier: TO_Avatar_Picker, sender: nil)
     }
     
     //to make an API request using AuthService to create account//

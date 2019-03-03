@@ -21,6 +21,8 @@
 		4554F13B221572BD0042AEE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4554F139221572BD0042AEE7 /* LaunchScreen.storyboard */; };
 		45B5BBB2221B7DA0007EA430 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B5BBB1221B7DA0007EA430 /* Contants.swift */; };
 		45D964C32220622200F4B62A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D964C22220622200F4B62A /* AuthService.swift */; };
+		45E88DD7222BC4A600EA230B /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E88DD6222BC4A600EA230B /* AvatarPickerVC.swift */; };
+		45E88DD9222BD9B200EA230B /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E88DD8222BD9B200EA230B /* AvatarCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		4554F13C221572BD0042AEE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45B5BBB1221B7DA0007EA430 /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 		45D964C22220622200F4B62A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		45E88DD6222BC4A600EA230B /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
+		45E88DD8222BD9B200EA230B /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		4F2945BF84476A8B682003B1 /* Pods_Sleek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sleek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC43CAB8E0737B63C3BB8BA /* Pods-Sleek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleek.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sleek/Pods-Sleek.debug.xcconfig"; sourceTree = "<group>"; };
 		A8F94C40C59EA88B947D1B8A /* Pods-Sleek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleek.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sleek/Pods-Sleek.release.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				4535C0EB2217FA0300DDC5EE /* BGGradient.swift */,
+				45E88DD8222BD9B200EA230B /* AvatarCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 				45084DB22217249D00196D4B /* ChannelVC.swift */,
 				4542E2D1221C04D8007A0FBB /* LoginVC.swift */,
 				4542E2D3221C109D007A0FBB /* CreateAccountVC.swift */,
+				45E88DD6222BC4A600EA230B /* AvatarPickerVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -285,6 +291,8 @@
 			files = (
 				45084DB32217249D00196D4B /* ChannelVC.swift in Sources */,
 				45084DB1221723F000196D4B /* ChatVC.swift in Sources */,
+				45E88DD7222BC4A600EA230B /* AvatarPickerVC.swift in Sources */,
+				45E88DD9222BD9B200EA230B /* AvatarCell.swift in Sources */,
 				4542E2D4221C109D007A0FBB /* CreateAccountVC.swift in Sources */,
 				4542E2D2221C04D8007A0FBB /* LoginVC.swift in Sources */,
 				454817D1222AA7BD006C200B /* UserDataServices.swift in Sources */,
