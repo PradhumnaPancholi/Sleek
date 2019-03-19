@@ -30,6 +30,10 @@ class UserDataServices {
         
     }
     
+    func setAvatarName(avatarName: String) {
+        self.avatarName = avatarName
+    }
+    
     
 }
 
