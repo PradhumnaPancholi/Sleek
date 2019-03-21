@@ -38,9 +38,7 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         UserDataServices.instance.setAvatarName(avatarName : "avatar\(indexPath.item)")
         
         dismiss(animated: true, completion: nil)
-    }
-    
-    	
+    }  
     
     //to dismiss segue/VC//
     @IBAction func backBtnPressed(_ sender: Any) {

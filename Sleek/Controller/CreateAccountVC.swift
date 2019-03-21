@@ -19,7 +19,8 @@ class CreateAccountVC: UIViewController {
     
     //variables//
     var avatarName = "user"//for default user image//
-    var avatarColor = "[0.5,05,0.5,1]"
+    var avatarColor = "[0.5,05,0.5,1]"//default//
+    var avatarBGColor : UIColor?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +67,21 @@ class CreateAccountVC: UIViewController {
                 }
         }
     }
+    
+    //to generate a random background color for avatar//
+    @IBAction func generateBGPressed(_ sender: Any) {
+        let r = CGFloat(arc4random_uniform(255)) / 255
+        let b = CGFloat(arc4random_uniform(255)) / 255
+        let g = CGFloat(arc4random_uniform(255)) / 255
+        
+        avatarBGColor = UIColor(red: r, green: g, blue: b, alpha: 1)
+        
+        //to make a transition with animationfade effect//
+        UIView.animate(withDuration: 0.2) {
+           self.userImg.backgroundColor = self.avatarBGColor
+        }
+    }
+    
     //to dismiss Create Account View and load back to Channel View//
     @IBAction func closeBtnPressed(_ sender: Any) {
         //need to fix this with unwind segue for better UX//
