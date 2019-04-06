@@ -24,6 +24,8 @@
 		45D964C32220622200F4B62A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D964C22220622200F4B62A /* AuthService.swift */; };
 		45E88DD7222BC4A600EA230B /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E88DD6222BC4A600EA230B /* AvatarPickerVC.swift */; };
 		45E88DD9222BD9B200EA230B /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E88DD8222BD9B200EA230B /* AvatarCell.swift */; };
+		CA04242F2256221F0011298B /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA04242D2256221F0011298B /* ProfileVC.swift */; };
+		CA0424302256221F0011298B /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA04242E2256221F0011298B /* ProfileVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		4F2945BF84476A8B682003B1 /* Pods_Sleek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sleek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC43CAB8E0737B63C3BB8BA /* Pods-Sleek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleek.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sleek/Pods-Sleek.debug.xcconfig"; sourceTree = "<group>"; };
 		A8F94C40C59EA88B947D1B8A /* Pods-Sleek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleek.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sleek/Pods-Sleek.release.xcconfig"; sourceTree = "<group>"; };
+		CA04242D2256221F0011298B /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		CA04242E2256221F0011298B /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 				4542E2D1221C04D8007A0FBB /* LoginVC.swift */,
 				4542E2D3221C109D007A0FBB /* CreateAccountVC.swift */,
 				45E88DD6222BC4A600EA230B /* AvatarPickerVC.swift */,
+				CA04242D2256221F0011298B /* ProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 		4554F12F221572BD0042AEE7 /* Sleek */ = {
 			isa = PBXGroup;
 			children = (
+				CA0424312256223E0011298B /* XIBFiles */,
 				45D964C1222061D200F4B62A /* Services */,
 				45B5BBB0221B7D7B007EA430 /* Utilities */,
 				45084DAF2217238800196D4B /* Controller */,
@@ -171,6 +177,14 @@
 				454817D0222AA7BD006C200B /* UserDataServices.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		CA0424312256223E0011298B /* XIBFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CA04242E2256221F0011298B /* ProfileVC.xib */,
+			);
+			path = XIBFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4554F13B221572BD0042AEE7 /* LaunchScreen.storyboard in Resources */,
+				CA0424302256221F0011298B /* ProfileVC.xib in Resources */,
 				4554F138221572BD0042AEE7 /* Assets.xcassets in Resources */,
 				4554F136221572BD0042AEE7 /* Main.storyboard in Resources */,
 			);
@@ -305,6 +320,7 @@
 				45D964C32220622200F4B62A /* AuthService.swift in Sources */,
 				4535C0EC2217FA0300DDC5EE /* BGGradient.swift in Sources */,
 				45B5BBB2221B7DA0007EA430 /* Contants.swift in Sources */,
+				CA04242F2256221F0011298B /* ProfileVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

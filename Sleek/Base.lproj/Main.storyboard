@@ -51,14 +51,14 @@
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sleek" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvw-2e-Sga">
-                                        <rect key="frame" x="161" y="67" width="66" height="33"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleek" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvw-2e-Sga">
+                                        <rect key="frame" x="157.5" y="65" width="60.5" height="37"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.24647887323943662" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.38039215686274508" green="0.69019607843137254" blue="0.51764705882352946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Nvw-2e-Sga" firstAttribute="centerY" secondItem="C3O-1Q-5vj" secondAttribute="centerY" id="9YU-GU-pPt"/>
                                     <constraint firstItem="Nvw-2e-Sga" firstAttribute="top" secondItem="3cZ-JC-r1E" secondAttribute="top" constant="65" id="GX8-hw-BfX"/>
@@ -91,7 +91,7 @@
             <objects>
                 <viewController id="ZVE-FI-Lb9" customClass="ChannelVC" customModule="Sleek" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JrD-Op-HTV" customClass="BGGradient" customModule="Sleek" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzM-PT-hcp">
@@ -107,18 +107,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jh8-r3-o64">
-                                <rect key="frame" x="208" y="97" width="32" height="32"/>
+                                <rect key="frame" x="263" y="97" width="32" height="32"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" image="addButton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user (1)" translatesAutoresizingMaskIntoConstraints="NO" id="Iqx-Ql-pQ7">
-                                <rect key="frame" x="16" y="516" width="32" height="32"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user (1)" translatesAutoresizingMaskIntoConstraints="NO" id="Iqx-Ql-pQ7" customClass="RoundImg" customModule="Sleek" customModuleProvider="target">
+                                <rect key="frame" x="16" y="615" width="32" height="32"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idz-89-95i">
-                                <rect key="frame" x="68" y="510.5" width="62" height="43"/>
+                                <rect key="frame" x="68" y="609.5" width="62" height="43"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -128,7 +128,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iZu-kj-SA9">
-                                <rect key="frame" x="0.0" y="149" width="320" height="353.5"/>
+                                <rect key="frame" x="0.0" y="149" width="375" height="452.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -165,17 +165,17 @@
             <objects>
                 <viewController id="dt9-NP-TiG" customClass="LoginVC" customModule="Sleek" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qvq-wM-JBe" customClass="BGGradient" customModule="Sleek" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTu-F4-Dci">
-                                <rect key="frame" x="127.5" y="96" width="65.5" height="36"/>
+                                <rect key="frame" x="155" y="96" width="65.5" height="36"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eYO-XG-jac">
-                                <rect key="frame" x="49" y="220" width="222" height="30"/>
+                                <rect key="frame" x="76.5" y="220" width="222" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="222" id="J2T-kU-g1C"/>
                                 </constraints>
@@ -184,13 +184,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZI-bI-fmI">
-                                <rect key="frame" x="49" y="270" width="222" height="30"/>
+                                <rect key="frame" x="76.5" y="270" width="222" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Aw-e6-Ukn">
-                                <rect key="frame" x="-0.5" y="480" width="321" height="40"/>
+                                <rect key="frame" x="27" y="480" width="321" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="321" id="aQX-Gg-5GA"/>
                                 </constraints>
@@ -203,7 +203,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8t-3n-T9X">
-                                <rect key="frame" x="102" y="350" width="116" height="50"/>
+                                <rect key="frame" x="129.5" y="350" width="116" height="50"/>
                                 <color key="backgroundColor" red="0.062745098039215685" green="0.3380281690140845" blue="0.38028169010140844" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="116" id="M46-5r-c2w"/>
@@ -215,7 +215,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAm-SR-D8B">
-                                <rect key="frame" x="278" y="61" width="15" height="15"/>
+                                <rect key="frame" x="333" y="61" width="15" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="15" id="SCc-WL-ohy"/>
                                     <constraint firstAttribute="height" constant="15" id="h71-Ic-KCA"/>
@@ -257,11 +257,11 @@
             <objects>
                 <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="xpA-4W-VKQ" customClass="CreateAccountVC" customModule="Sleek" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XbB-vl-IyZ" customClass="BGGradient" customModule="Sleek" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="nN1-HU-Bib">
-                                <rect key="frame" x="49" y="168.5" width="222" height="128"/>
+                                <rect key="frame" x="76.5" y="168.5" width="222" height="128"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zhE-El-ITL">
                                         <rect key="frame" x="0.0" y="0.0" width="222" height="30"/>
@@ -293,7 +293,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rg-q5-BxL">
-                                <rect key="frame" x="278" y="61" width="15" height="15"/>
+                                <rect key="frame" x="333" y="61" width="15" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="TRT-74-iMJ"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="V5D-lS-UKi"/>
@@ -307,7 +307,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPI-IC-jRE">
-                                <rect key="frame" x="110.5" y="426.5" width="99" height="30"/>
+                                <rect key="frame" x="138" y="426.5" width="99" height="30"/>
                                 <state key="normal" title="Choose avatar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -316,14 +316,14 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user (1)" translatesAutoresizingMaskIntoConstraints="NO" id="Vvy-6Z-caS" customClass="RoundImg" customModule="Sleek" customModuleProvider="target">
-                                <rect key="frame" x="120" y="336.5" width="80" height="80"/>
+                                <rect key="frame" x="147.5" y="336.5" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="aVV-cb-Sip"/>
                                     <constraint firstAttribute="width" constant="80" id="hy1-js-OE2"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqb-li-eHH">
-                                <rect key="frame" x="72.5" y="516.5" width="175" height="43"/>
+                                <rect key="frame" x="100" y="516.5" width="175" height="43"/>
                                 <color key="backgroundColor" red="0.062745098040000002" green="0.33802816899999999" blue="0.38028169010000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="dby-jd-oIn"/>
@@ -337,7 +337,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdE-3x-VrT">
-                                <rect key="frame" x="61.5" y="451.5" width="197" height="36"/>
+                                <rect key="frame" x="89" y="451.5" width="197" height="36"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="Choose background color">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -400,11 +400,11 @@
             <objects>
                 <viewController id="ZWd-Zq-2yL" customClass="AvatarPickerVC" customModule="Sleek" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o6A-pT-ceH" customClass="BGGradient" customModule="Sleek" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Avatar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyP-AK-BgX">
-                                <rect key="frame" x="93" y="50" width="134" height="27.5"/>
+                                <rect key="frame" x="120.5" y="50" width="134" height="27.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -420,7 +420,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vPC-Gw-af3">
-                                <rect key="frame" x="0.0" y="87.5" width="320" height="480.5"/>
+                                <rect key="frame" x="0.0" y="87.5" width="375" height="579.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="scrollIndicatorInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yip-E1-pzo">
