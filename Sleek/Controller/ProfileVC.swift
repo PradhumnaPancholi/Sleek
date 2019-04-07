@@ -9,22 +9,31 @@
 import UIKit
 
 class ProfileVC: UIViewController {
-
+    //outlets//
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userEmail: UILabel!
+    @IBOutlet weak var userImg: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupView()
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //to dismiss profile modalpresentation//
+    @IBAction func closeBtnPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
-    */
-
+    
+    @IBAction func logoutBtnPushed(_ sender: Any) {
+        UserDataServices.instance.logout()
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func setupView() {
+        //for showing logged in user's data//
+        userName.text = UserDataServices.instance.name
+        userEmail.text = UserDataServices.instance.email
+        userImg.image = UIImage(named: UserDataServices.instance.avatarName)
+    }
 }
+

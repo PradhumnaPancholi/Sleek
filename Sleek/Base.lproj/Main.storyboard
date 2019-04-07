@@ -385,6 +385,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTxt" destination="bBE-oS-fFS" id="IKA-PR-TmK"/>
+                        <outlet property="loader" destination="fnK-Xa-mrF" id="UR9-IC-Ro5"/>
                         <outlet property="passwordTxt" destination="iPp-BX-KMH" id="psk-IK-egk"/>
                         <outlet property="userImg" destination="Vvy-6Z-caS" id="eBo-6e-4Sg"/>
                         <outlet property="userNameTxt" destination="zhE-El-ITL" id="QKL-dX-4eQ"/>

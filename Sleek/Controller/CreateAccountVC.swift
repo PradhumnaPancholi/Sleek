@@ -15,7 +15,7 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var userImg: UIImageView!
-    
+    @IBOutlet weak var loader: UIActivityIndicatorView!//for loading sign//
     
     //variables//
     var avatarName = "user"//for default user image//
@@ -24,6 +24,7 @@ class CreateAccountVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loader.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,6 +41,9 @@ class CreateAccountVC: UIViewController {
     
     //to make an API request using AuthService to create account//
     @IBAction func createAccountPressed(_ sender: Any) {
+        //for loader//
+        loader.isHidden = false
+        loader.startAnimating()
         
         //to get data for parameters from textfield (with a check to handle exceptions)//
         guard let userName = userNameTxt.text, userNameTxt.text != "" else {
@@ -64,6 +68,9 @@ class CreateAccountVC: UIViewController {
                         }
                     })
                     print("Registered User")
+                    //for loader//
+                    self.loader.stopAnimating()
+                    self.loader.isHidden = true
                 }
         }
     }

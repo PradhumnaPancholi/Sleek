@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVC" customModule="Sleek" customModuleProvider="target">
             <connections>
+                <outlet property="userEmail" destination="bYm-lN-xfj" id="8VC-Ji-0Kj"/>
+                <outlet property="userImg" destination="DUZ-Vn-3KN" id="h4w-Ms-qnF"/>
+                <outlet property="userName" destination="gR7-z9-13B" id="ec2-Ap-GkH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -36,6 +39,9 @@
                             <state key="normal" image="closeButton">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="closeBtnPressed:" destination="-1" eventType="touchUpInside" id="Ahb-7v-abd"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZG-uB-alc">
                             <rect key="frame" x="112.5" y="353" width="70" height="36"/>
@@ -47,6 +53,9 @@
                             <state key="normal" title="Logout">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="logoutBtnPushed:" destination="-1" eventType="touchUpInside" id="udb-Io-I1B"/>
+                            </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleAspectFit" misplaced="YES" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vpL-Vj-Uqt">
                             <rect key="frame" x="30" y="56" width="235" height="219"/>
@@ -65,7 +74,6 @@
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gR7-z9-13B">
                                     <rect key="frame" x="0.0" y="163" width="235" height="20.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jghucdghuo@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYm-lN-xfj">
@@ -107,7 +115,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RIw-vm-1Cz" secondAttribute="bottom" constant="115" id="rnG-Pf-KTR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="156" y="66.11694152923539"/>
+            <point key="canvasLocation" x="-492" y="113"/>
         </view>
     </objects>
     <resources>

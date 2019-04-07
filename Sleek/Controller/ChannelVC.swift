@@ -17,13 +17,15 @@ class ChannelVC: UIViewController {
     }
     //to load login View/Screen //
     @IBAction func loginBtnPressed(_ sender: Any) {
-        if AuthService.instance.isLoggedin{
+        if AuthService.instance.isLoggedin {
             let profile = ProfileVC()
             profile.modalPresentationStyle = .custom
             present(profile, animated: true, completion: nil)
+            print(AuthService.instance.isLoggedin)
         }
         else{
-            performSegue(withIdentifier: TO_Login, sender: nil)            
+            performSegue(withIdentifier: TO_Login, sender: nil)
+            
         }
     }
     

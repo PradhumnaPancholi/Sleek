@@ -14,11 +14,11 @@ class UserDataServices {
     static let instance = UserDataServices()
     
     //variables for UserData//
-    private(set) public var id: String = ""
-    private(set) public var name: String = ""
-    private(set) public var email: String = ""
-    private(set) public var avatarName: String = ""
-    private(set) public var avatarColor: String = ""
+    public private(set) var id: String = ""
+    public private(set) var name: String = ""
+    public private(set) var email: String = ""
+    public private(set) var avatarName: String = ""
+    public private(set) var avatarColor: String = ""
     
     //to set user data/
     func setUserData(id: String, name: String, email: String, avatarName: String, avatarColor: String) {
@@ -34,6 +34,16 @@ class UserDataServices {
         self.avatarName = avatarName
     }
     
+    //func to logout//
+    func logout() {
+        id = ""
+        name = ""
+        email = ""
+        avatarName = ""
+        avatarColor = ""
+        AuthService.instance.authToken = ""
+        AuthService.instance.isLoggedin = false
+    }
     
 }
 
