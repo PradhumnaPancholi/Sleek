@@ -26,6 +26,7 @@ class ProfileVC: UIViewController {
     
     @IBAction func logoutBtnPushed(_ sender: Any) {
         UserDataServices.instance.logout()
+        NotificationCenter.default.post(name: NOTIF_USR_DATA_CHANGED, object: nil)
         dismiss(animated: true, completion: nil)
     }
     
@@ -35,5 +36,6 @@ class ProfileVC: UIViewController {
         userEmail.text = UserDataServices.instance.email
         userImg.image = UIImage(named: UserDataServices.instance.avatarName)
     }
+  
 }
 

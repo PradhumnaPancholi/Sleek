@@ -14,6 +14,9 @@ let TO_Create_Account = "toCreateAccount"
 let UNWIND = "Unwind_Seague"
 let TO_Avatar_Picker = "toAvatarPicker"
 
+//notification constants//
+let NOTIF_USR_DATA_CHANGED = Notification.Name("user_data_changed") 
+
 //User Defaults//
 var LOGGED_IN_KEY = "logged in"
 var TOKEN_KEY = "token"

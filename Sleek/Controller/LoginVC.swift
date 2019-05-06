@@ -48,6 +48,7 @@ class LoginVC: UIViewController {
                 self.loader.isHidden = true
                 //to dismiss segue//
                 self.dismiss(animated: true, completion: nil)
+                NotificationCenter.default.post(name: NOTIF_USR_DATA_CHANGED, object: nil)      
             }
         })
     }

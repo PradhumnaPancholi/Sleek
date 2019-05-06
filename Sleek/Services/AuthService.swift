@@ -155,4 +155,10 @@ class AuthService {
     
     }
     
+    //func to fetch userdata and save them on userdefaults on login//
+    func setUserInfo() {
+        
+        
+    }
+    
 }

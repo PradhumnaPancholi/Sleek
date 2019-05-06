@@ -116,6 +116,10 @@
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user (1)" translatesAutoresizingMaskIntoConstraints="NO" id="Iqx-Ql-pQ7" customClass="RoundImg" customModule="Sleek" customModuleProvider="target">
                                 <rect key="frame" x="16" y="615" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="OgR-c2-XRi"/>
+                                    <constraint firstAttribute="width" constant="35" id="tTU-yw-IYo"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idz-89-95i">
                                 <rect key="frame" x="68" y="609.5" width="62" height="43"/>
@@ -153,6 +157,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="idz-89-95i" id="jD9-Or-MeO"/>
+                        <outlet property="userImg" destination="Iqx-Ql-pQ7" id="l4k-qc-Ahl"/>
                         <segue destination="dt9-NP-TiG" kind="show" identifier="toLogin" id="KHA-W4-9Ou"/>
                     </connections>
                 </viewController>
@@ -229,7 +234,7 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="LrF-eV-Wvj">
-                                <rect key="frame" x="169" y="250" width="37" height="37"/>
+                                <rect key="frame" x="169" y="335" width="37" height="37"/>
                                 <color key="color" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                         </subviews>

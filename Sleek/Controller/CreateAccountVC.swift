@@ -64,7 +64,7 @@ class CreateAccountVC: UIViewController {
                             print("Loggen in")
                             AuthService.instance.createUser(name: userName, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
                                 print("User created")
-                            })
+                            NotificationCenter.default.post(name: NOTIF_USR_DATA_CHANGED, object: nil)	                            })
                         }
                     })
                     print("Registered User")
