@@ -26,6 +26,7 @@
 		45E88DD9222BD9B200EA230B /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E88DD8222BD9B200EA230B /* AvatarCell.swift */; };
 		CA04242F2256221F0011298B /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA04242D2256221F0011298B /* ProfileVC.swift */; };
 		CA0424302256221F0011298B /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA04242E2256221F0011298B /* ProfileVC.xib */; };
+		CA57BCED22851E800053D6A9 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA57BCEC22851E800053D6A9 /* Channel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		A8F94C40C59EA88B947D1B8A /* Pods-Sleek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleek.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sleek/Pods-Sleek.release.xcconfig"; sourceTree = "<group>"; };
 		CA04242D2256221F0011298B /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		CA04242E2256221F0011298B /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
+		CA57BCEC22851E800053D6A9 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,13 +95,6 @@
 				45084DA92217043200196D4B /* Sleek-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		45084DAD2217236F00196D4B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		45084DAE2217237D00196D4B /* View */ = {
@@ -150,8 +145,8 @@
 				45D964C1222061D200F4B62A /* Services */,
 				45B5BBB0221B7D7B007EA430 /* Utilities */,
 				45084DAF2217238800196D4B /* Controller */,
+				CA57BCEB22851E680053D6A9 /* Model */,
 				45084DAE2217237D00196D4B /* View */,
-				45084DAD2217236F00196D4B /* Model */,
 				45084DA8221703E400196D4B /* Supporting Files */,
 				4554F130221572BD0042AEE7 /* AppDelegate.swift */,
 				4554F134221572BD0042AEE7 /* Main.storyboard */,
@@ -185,6 +180,14 @@
 				CA04242E2256221F0011298B /* ProfileVC.xib */,
 			);
 			path = XIBFiles;
+			sourceTree = "<group>";
+		};
+		CA57BCEB22851E680053D6A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CA57BCEC22851E800053D6A9 /* Channel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45084DB32217249D00196D4B /* ChannelVC.swift in Sources */,
+				CA57BCED22851E800053D6A9 /* Channel.swift in Sources */,
 				45084DB1221723F000196D4B /* ChatVC.swift in Sources */,
 				45E88DD7222BC4A600EA230B /* AvatarPickerVC.swift in Sources */,
 				45E88DD9222BD9B200EA230B /* AvatarCell.swift in Sources */,
