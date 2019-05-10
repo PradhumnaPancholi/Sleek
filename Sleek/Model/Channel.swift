@@ -8,8 +8,8 @@
 
 import Foundation
 
-class Channel {
+struct Channel {
     public var id: String?
-    public var name: String?
-    public var desc: String?
+    public var channelTitle: String?
+    public var channelDescription: String?
 }

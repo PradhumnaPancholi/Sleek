@@ -27,6 +27,7 @@
 		CA04242F2256221F0011298B /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA04242D2256221F0011298B /* ProfileVC.swift */; };
 		CA0424302256221F0011298B /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA04242E2256221F0011298B /* ProfileVC.xib */; };
 		CA57BCED22851E800053D6A9 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA57BCEC22851E800053D6A9 /* Channel.swift */; };
+		CA57BCEF2285208C0053D6A9 /* MsgServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA57BCEE2285208C0053D6A9 /* MsgServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		CA04242D2256221F0011298B /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		CA04242E2256221F0011298B /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		CA57BCEC22851E800053D6A9 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		CA57BCEE2285208C0053D6A9 /* MsgServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 			children = (
 				45D964C22220622200F4B62A /* AuthService.swift */,
 				454817D0222AA7BD006C200B /* UserDataServices.swift */,
+				CA57BCEE2285208C0053D6A9 /* MsgServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				45E88DD9222BD9B200EA230B /* AvatarCell.swift in Sources */,
 				4542E2D4221C109D007A0FBB /* CreateAccountVC.swift in Sources */,
 				4542E2D2221C04D8007A0FBB /* LoginVC.swift in Sources */,
+				CA57BCEF2285208C0053D6A9 /* MsgServices.swift in Sources */,
 				454817D1222AA7BD006C200B /* UserDataServices.swift in Sources */,
 				4554F131221572BD0042AEE7 /* AppDelegate.swift in Sources */,
 				4567C7C42243D75D00C25603 /* RoundImg.swift in Sources */,
