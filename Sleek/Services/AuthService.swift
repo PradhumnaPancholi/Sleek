@@ -105,6 +105,7 @@ class AuthService {
                     self.authToken = json["token"].stringValue
                     self.isLoggedin = true
                     completion(true)
+                    MsgServices.instance.getAllChannel()
                 }
                 else{
                     completion(false)

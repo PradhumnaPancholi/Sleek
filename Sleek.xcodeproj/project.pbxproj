@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0FEB29D7B7C43D3A15F5C6AB /* Pods_Sleek.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2945BF84476A8B682003B1 /* Pods_Sleek.framework */; };
+		2B109CE5228F876100E89AB5 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B109CE4228F876100E89AB5 /* ChannelCell.swift */; };
 		45084DAC2217043300196D4B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45084DAA2217043300196D4B /* SWRevealViewController.m */; };
 		45084DB1221723F000196D4B /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45084DB0221723F000196D4B /* ChatVC.swift */; };
 		45084DB32217249D00196D4B /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45084DB22217249D00196D4B /* ChannelVC.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B109CE4228F876100E89AB5 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		45084DA92217043200196D4B /* Sleek-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sleek-Bridging-Header.h"; sourceTree = "<group>"; };
 		45084DAA2217043300196D4B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		45084DAB2217043300196D4B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				4535C0EB2217FA0300DDC5EE /* BGGradient.swift */,
 				45E88DD8222BD9B200EA230B /* AvatarCell.swift */,
 				4567C7C32243D75D00C25603 /* RoundImg.swift */,
+				2B109CE4228F876100E89AB5 /* ChannelCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				4554F131221572BD0042AEE7 /* AppDelegate.swift in Sources */,
 				4567C7C42243D75D00C25603 /* RoundImg.swift in Sources */,
 				45084DAC2217043300196D4B /* SWRevealViewController.m in Sources */,
+				2B109CE5228F876100E89AB5 /* ChannelCell.swift in Sources */,
 				45D964C32220622200F4B62A /* AuthService.swift in Sources */,
 				4535C0EC2217FA0300DDC5EE /* BGGradient.swift in Sources */,
 				45B5BBB2221B7DA0007EA430 /* Contants.swift in Sources */,
