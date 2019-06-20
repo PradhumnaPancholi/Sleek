@@ -29,9 +29,7 @@ class MsgServices {
                         self.channels.append(channel)
                         debugPrint(self.channels)
                     }
-                    print(self.channels[0].channelTitle)
-                    //completion(true)
-                }else {
+                }else{
                     //completion(false)
                     debugPrint(response.result.error as Any)
                 }

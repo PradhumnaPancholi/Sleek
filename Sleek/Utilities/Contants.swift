@@ -29,12 +29,18 @@ typealias CompletionHandler  =  (_ Success: Bool) -> ()
 let BASE_URL = "https://sleek777.herokuapp.com/v1/"
 let REGISTER_URL = "\(BASE_URL)account/register"
 let LOGIN_URL = "\(BASE_URL)account/login"
+let FIND_USER_BY_EMAIL = "\(BASE_URL)byEmail"
 let ADD_USER_URL = "\(BASE_URL)user/add"
 let GET_ALL_CHANNELS = "\(BASE_URL)channels"
 
 //for header//
 let HEADER = [
     "Content-Type": "Application/JSON; charset = utf-8"
+]
+
+let BEARER_HEADER = [
+    "Content-Type": "Application/JSON; charset = utf-8",
+    "Authorization": "Bearer \(AuthService.instance.authToken)"
 ]
 
 

@@ -128,13 +128,8 @@ class AuthService {
             
         ]
         
-        let header = [
-            "Content-Type": "Application/JSON; charset = utf-8",
-            "Authorization": "Bearer \(self.authToken)"
-         ]
-        
         //to make actual API request//
-        Alamofire.request(ADD_USER_URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
+        Alamofire.request(ADD_USER_URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
             if response.result.error == nil{
                 guard let data = response.data else {return}
                 let json = try! JSON(data: data)
@@ -156,13 +151,33 @@ class AuthService {
     
     }
     
-    //to find user when user tries to login//
-    func 
+    //to find user when user logs in//
+    func findUserByEmail(completion: @escaping CompletionHandler) {
+        //to make request to find user data//
+        Alamofire.request("\(FIND_USER_BY_EMAIL)\(userEmail)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
+            if response.result.error == nil{
+                guard let data = response.data else {return}
+                self.setUserInfo(data: data)
+                completion(true)
+            }
+            else{
+                completion(false)
+                print(response.result.error as Any)
+            }
+        }
+    }
     
-    //func to fetch userdata and save them on userdefaults on login//
-    func setUserInfo() {
+    //func to save fetced data into user defaults//
+    func setUserInfo(data: Data) {
+        let json = try! JSON(data: data)
+        let id = json["_id"].stringValue
+        let name = json["name"].stringValue
+        let email = json["email"].stringValue
+        let aColor = json["avatorColor"].stringValue
+        let aName = json["avatarName"].stringValue
         
-        
+        //to save  UserData//
+        UserDataServices.instance.setUserData(id: id, name: name, email: email, avatarName: aName, avatarColor: aColor)
     }
     
 }

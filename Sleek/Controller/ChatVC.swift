@@ -22,6 +22,13 @@ class ChatVC: UIViewController {
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         //To add "Tap" gesture to close SideBar//
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        
+        //to check and recieve user data if logged in and broadcast the msg with notification//
+        if AuthService.instance.isLoggedin {
+            AuthService.instance.findUserByEmail { (success) in
+                NotificationCenter.default.post(name: NOTIF_USR_DATA_CHANGED, object: nil)
+            }
+        }
       
     }
 

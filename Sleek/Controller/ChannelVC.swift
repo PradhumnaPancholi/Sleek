@@ -19,7 +19,11 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(userDataChanged(_:)), name: NOTIF_USR_DATA_CHANGED, object: nil)
     }
-    //to load login View/Screen //
+    //to look for user data before view loads
+    override func viewDidAppear(_ animated: Bool) {
+        setUpUserInfo()
+    }
+    //to load login modal View/Screen //
     @IBAction func loginBtnPressed(_ sender: Any) {
         if AuthService.instance.isLoggedin {
             let profile = ProfileVC()
@@ -32,17 +36,24 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    //to manage user data when notification post happens//
     @objc func userDataChanged(_ notif: Notification) {
+        setUpUserInfo()
+    }
+    
+    //to set user info//
+    func setUpUserInfo() {
         if (AuthService.instance.isLoggedin) {
             loginBtn.setTitle(UserDataServices.instance.name, for: .normal)
             userImg.image = UIImage(named: UserDataServices.instance.avatarName)
-            }
+        }
         else{
             loginBtn.setTitle("Log In", for: .normal)
             userImg.image = UIImage(named: "user")
         }
     }
     
+    //for view layer----------------------------------------
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return MsgServices.instance.channels.count
     }

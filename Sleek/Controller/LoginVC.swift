@@ -22,7 +22,6 @@ class LoginVC: UIViewController {
     //to close/dismiss Login VC//
     @IBAction func closeBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-        
     }
     
     //to load Create Account VC//
@@ -42,13 +41,19 @@ class LoginVC: UIViewController {
         }
         AuthService.instance.loginUser(email: userEmail, password: userPassword, completion: { (success) in
             if success{
-                print("You are Logged In")
-                //for loader//
-                self.loader.stopAnimating()
-                self.loader.isHidden = true
-                //to dismiss segue//
-                self.dismiss(animated: true, completion: nil)
-                NotificationCenter.default.post(name: NOTIF_USR_DATA_CHANGED, object: nil)      
+                AuthService.instance.findUserByEmail(completion: { (success) in
+                    if success{
+                        //to manage user data//
+                        NotificationCenter.default.post(name: NOTIF_USR_DATA_CHANGED, object: nil)
+                        //for loader//
+                        self.loader.isHidden = true
+                        self.loader.stopAnimating()
+                        //to dismiss segue//
+                        self.dismiss(animated: true, completion: nil)
+                        print(UserDataServices.instance.name)
+                    }
+                })
+                
             }
         })
     }
