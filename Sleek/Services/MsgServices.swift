@@ -11,7 +11,6 @@ import Alamofire
 import SwiftyJSON
 
 class MsgServices {
-    
     static let instance = MsgServices()
     
     var channels = [Channel]()

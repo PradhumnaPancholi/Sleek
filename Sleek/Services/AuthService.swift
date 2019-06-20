@@ -156,6 +156,9 @@ class AuthService {
     
     }
     
+    //to find user when user tries to login//
+    func 
+    
     //func to fetch userdata and save them on userdefaults on login//
     func setUserInfo() {
         
