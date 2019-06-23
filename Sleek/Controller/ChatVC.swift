@@ -27,9 +27,11 @@ class ChatVC: UIViewController {
         if AuthService.instance.isLoggedin {
             AuthService.instance.findUserByEmail { (success) in
                 NotificationCenter.default.post(name: NOTIF_USR_DATA_CHANGED, object: nil)
+                
             }
         }
-      
+        //to get all channels//
+        MsgServices.instance.getAllChannel()
     }
 
 }

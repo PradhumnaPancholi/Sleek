@@ -27,7 +27,7 @@ class MsgServices {
                         let id = item["_id"].stringValue
                         let channel = Channel(id: id, channelTitle: name, channelDescription: desc)
                         self.channels.append(channel)
-                        debugPrint(self.channels)
+                        print(self.channels)
                     }
                 }else{
                     //completion(false)

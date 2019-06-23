@@ -113,6 +113,9 @@
                                 <state key="normal" image="addButton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addChannelPressed:" destination="ZVE-FI-Lb9" eventType="touchUpInside" id="x40-Ml-ywx"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="Iqx-Ql-pQ7" customClass="RoundImg" customModule="Sleek" customModuleProvider="target">
                                 <rect key="frame" x="16" y="612" width="35" height="35"/>

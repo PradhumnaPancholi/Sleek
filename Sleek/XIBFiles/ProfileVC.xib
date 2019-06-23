@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,9 +23,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r1d-fa-CLi" userLabel="BGView">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kdn-fV-I0s" userLabel="bgView">
+                    <rect key="frame" x="67" y="269" width="240" height="128"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="RIw-vm-1Cz" customClass="BGGradient" customModule="Sleek" customModuleProvider="target">
                     <rect key="frame" x="40" y="140" width="295" height="412"/>
@@ -74,6 +74,7 @@
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gR7-z9-13B">
                                     <rect key="frame" x="0.0" y="163" width="235" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jghucdghuo@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYm-lN-xfj">
@@ -106,13 +107,13 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="RIw-vm-1Cz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="120" id="NRg-bk-Cwl"/>
-                <constraint firstItem="r1d-fa-CLi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="P5g-Ht-YlF"/>
-                <constraint firstItem="r1d-fa-CLi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="U0o-5e-Tja"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Kdn-fV-I0s" secondAttribute="trailing" id="dOr-xP-TB0"/>
                 <constraint firstItem="RIw-vm-1Cz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="eNK-us-yxB"/>
-                <constraint firstItem="r1d-fa-CLi" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="j37-T4-FFg"/>
-                <constraint firstItem="r1d-fa-CLi" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="kl6-Rb-obh"/>
+                <constraint firstItem="Kdn-fV-I0s" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gN8-LB-sZH"/>
                 <constraint firstItem="RIw-vm-1Cz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rax-z3-QaQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Kdn-fV-I0s" secondAttribute="bottom" id="rme-Ie-VhI"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RIw-vm-1Cz" secondAttribute="bottom" constant="115" id="rnG-Pf-KTR"/>
+                <constraint firstItem="Kdn-fV-I0s" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xCD-IK-mu6"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-492" y="113"/>
