@@ -31,7 +31,9 @@ class ChatVC: UIViewController {
             }
         }
         //to get all channels//
-        MsgServices.instance.getAllChannel()
+        MsgServices.instance.getAllChannels { (success) in
+            
+        }
     }
 
 }

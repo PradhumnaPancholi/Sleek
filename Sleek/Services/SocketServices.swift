@@ -48,7 +48,6 @@ class SocketServices: NSObject {
             let newChannel = Channel(id: channelID, channelTitle: channelName, channelDescription: channelDesc)
             //appending newchannel to channels array//
             MsgServices.instance.channels.append(newChannel)
-            print(MsgServices.instance.channels)
             completion(true)
         }
     }
