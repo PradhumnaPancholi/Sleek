@@ -27,6 +27,7 @@
 		45E88DD9222BD9B200EA230B /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E88DD8222BD9B200EA230B /* AvatarCell.swift */; };
 		9FE3A14B22BED003008B5998 /* AddChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE3A14922BED003008B5998 /* AddChannelVC.swift */; };
 		9FE3A14C22BED003008B5998 /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FE3A14A22BED003008B5998 /* AddChannelVC.xib */; };
+		9FE3A14E22C18908008B5998 /* SocketServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE3A14D22C18907008B5998 /* SocketServices.swift */; };
 		CA04242F2256221F0011298B /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA04242D2256221F0011298B /* ProfileVC.swift */; };
 		CA0424302256221F0011298B /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA04242E2256221F0011298B /* ProfileVC.xib */; };
 		CA57BCED22851E800053D6A9 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA57BCEC22851E800053D6A9 /* Channel.swift */; };
@@ -59,6 +60,7 @@
 		9FC43CAB8E0737B63C3BB8BA /* Pods-Sleek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleek.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sleek/Pods-Sleek.debug.xcconfig"; sourceTree = "<group>"; };
 		9FE3A14922BED003008B5998 /* AddChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelVC.swift; sourceTree = "<group>"; };
 		9FE3A14A22BED003008B5998 /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
+		9FE3A14D22C18907008B5998 /* SocketServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketServices.swift; sourceTree = "<group>"; };
 		A8F94C40C59EA88B947D1B8A /* Pods-Sleek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleek.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sleek/Pods-Sleek.release.xcconfig"; sourceTree = "<group>"; };
 		CA04242D2256221F0011298B /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		CA04242E2256221F0011298B /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				45D964C22220622200F4B62A /* AuthService.swift */,
 				454817D0222AA7BD006C200B /* UserDataServices.swift */,
 				CA57BCEE2285208C0053D6A9 /* MsgServices.swift */,
+				9FE3A14D22C18907008B5998 /* SocketServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				45084DB1221723F000196D4B /* ChatVC.swift in Sources */,
 				45E88DD7222BC4A600EA230B /* AvatarPickerVC.swift in Sources */,
 				45E88DD9222BD9B200EA230B /* AvatarCell.swift in Sources */,
+				9FE3A14E22C18908008B5998 /* SocketServices.swift in Sources */,
 				4542E2D4221C109D007A0FBB /* CreateAccountVC.swift in Sources */,
 				4542E2D2221C04D8007A0FBB /* LoginVC.swift in Sources */,
 				CA57BCEF2285208C0053D6A9 /* MsgServices.swift in Sources */,

@@ -18,6 +18,13 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(userDataChanged(_:)), name: NOTIF_USR_DATA_CHANGED, object: nil)
+        
+        //to recieve channels continuesly//
+        SocketServices.instance.getAllChannels { (success) in
+            if success{
+                self.tableView.reloadData()
+            }
+        }
     }
     //to look for user data before view loads
     override func viewDidAppear(_ animated: Bool) {
