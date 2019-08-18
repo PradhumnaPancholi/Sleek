@@ -17,6 +17,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.revealViewController()?.rearViewRevealWidth = self.view.frame.width - 40
         NotificationCenter.default.addObserver(self, selector: #selector(userDataChanged(_:)), name: NOTIF_USR_DATA_CHANGED, object: nil)
         
         //to recieve channels continuesly//
