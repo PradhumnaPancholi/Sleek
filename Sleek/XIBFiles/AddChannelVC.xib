@@ -30,7 +30,11 @@
                     <rect key="frame" x="60" y="162" width="294" height="350"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPU-9h-k6a">
-                            <rect key="frame" x="254" y="8" width="32" height="32"/>
+                            <rect key="frame" x="266" y="8" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="73M-dU-c1q"/>
+                                <constraint firstAttribute="width" constant="20" id="XmB-fd-Oam"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="6"/>
                             <state key="normal" image="closeButton"/>
                             <connections>

@@ -21,7 +21,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         NotificationCenter.default.addObserver(self, selector: #selector(userDataChanged(_:)), name: NOTIF_USR_DATA_CHANGED, object: nil)
         
         //to recieve channels continuesly//
-        SocketServices.instance.getAllChannels { (success) in
+        SocketServices.instance.getChannel { (success) in
             if success{
                 self.tableView.reloadData()
             }
@@ -68,11 +68,12 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     //for tablView----------------------------------------
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return MsgServices.instance.channels.count
-    }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return MsgServices.instance.channels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

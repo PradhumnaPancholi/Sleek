@@ -34,12 +34,12 @@ class SocketServices: NSObject {
     //function to add a channel//
     func addChannel(channelName: String, channelDescription: String, completion: @escaping CompletionHandler) {
         socket.emit("newChannel", channelName, channelDescription)
+        print("this is from addchannel function")
         completion(true)
-        print("this worked")
     }
     
     //function to recieve channels//
-    func getAllChannels(completion: @escaping CompletionHandler) {
+    func getChannel(completion: @escaping CompletionHandler) {
         socket.on("channelCreated") { (data, ack ) in
             guard let channelName = data[0] as? String else {return}
             guard let channelDesc = data[1] as? String else {return}
@@ -48,6 +48,7 @@ class SocketServices: NSObject {
             let newChannel = Channel(id: channelID, channelTitle: channelName, channelDescription: channelDesc)
             //appending newchannel to channels array//
             MsgServices.instance.channels.append(newChannel)
+            print(MsgServices.instance.channels)
             completion(true)
         }
     }

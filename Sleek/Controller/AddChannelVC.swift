@@ -23,11 +23,11 @@ class AddChannelVC: UIViewController {
     
     //func to add channel when user pressed add channel//
     @IBAction func addChannelCreated(_ sender: Any) {
-        guard let chanName = channelName.text as String? else { return }
-        guard let chanDesc = channelDesc.text as String? else { return }
+        guard let channelName = channelName.text as String? else { return }
+        guard let channelDesc = channelDesc.text as String? else { return }
         
         //making request to server to create channel//
-        SocketServices.instance.addChannel(channelName: chanName, channelDescription: chanDesc, completion: { (success) in
+        SocketServices.instance.addChannel(channelName: channelName, channelDescription: channelDesc, completion: { (success) in
             if success {
                 self.dismiss(animated: true, completion: nil)
             }
