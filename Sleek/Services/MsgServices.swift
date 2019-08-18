@@ -17,7 +17,7 @@ class MsgServices {
     
     //a function to get all channels//
     func getAllChannels(completion: @escaping CompletionHandler){
-        Alamofire.request(GET_ALL_CHANNELS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response) in
+        Alamofire.request(GET_ALL_CHANNELS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER ).responseJSON { (response) in
             if response.result.error == nil {
                 guard let data = response.data else {return}
                 if let json = try! JSON(data: data).array {
