@@ -13,6 +13,7 @@ class ChatVC: UIViewController {
     //outlets//
     @IBOutlet weak var menuBtn: UIButton!
 
+    @IBOutlet weak var nameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,20 +23,31 @@ class ChatVC: UIViewController {
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         //To add "Tap" gesture to close SideBar//
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        //Notification observer when user data changes//
+        NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.userDataDidChange(_:)), name: NOTIF_USR_DATA_CHANGED, object: nil)
         
         //to check and recieve user data if logged in and broadcast the msg with notification//
         if AuthService.instance.isLoggedin {
             AuthService.instance.findUserByEmail { (success) in
                 NotificationCenter.default.post(name: NOTIF_USR_DATA_CHANGED, object: nil)
-                
             }
-            //to get all channels//
-            MsgServices.instance.getAllChannels { (success) in
-                if success{
-                    print("Fetched all channels")
-                }else{
-                    print("Couldn't fetch channels")
-                }
+        }
+    }
+    
+    //to load channels when user data changess //
+    @objc func userDataDidChange(_ notif: Notification) {
+        if AuthService.instance.isLoggedin {
+            onLoginGetMessages()
+        }else{
+           //show msg to login //
+            nameLabel.text = "Please Log In"
+        }
+    }
+    //func to get channels & messages on login //
+    func onLoginGetMessages() {
+        MsgServices.instance.getAllChannels { (success) in
+            if (success){
+                //do stuff for messages//
             }
         }
     }
