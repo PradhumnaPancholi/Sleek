@@ -35,9 +35,11 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     //to load modal to add new channel//
     @IBAction func addChannelPressed(_ sender: Any) {
-        let addChannelModal = AddChannelVC()
-        addChannelModal.modalPresentationStyle = .custom
-        present(addChannelModal, animated: true, completion: nil)
+        if (AuthService.instance.isLoggedin){
+            let addChannelModal = AddChannelVC()
+            addChannelModal.modalPresentationStyle = .custom
+            present(addChannelModal, animated: true, completion: nil)
+        }
     }
     //to load login modal View/Screen //
     @IBAction func loginBtnPressed(_ sender: Any) {
