@@ -29,9 +29,9 @@ class MsgServices {
                         let id = item["_id"].stringValue
                         let channel = Channel(id: id, channelTitle: name, channelDescription: desc)
                         self.channels.append(channel)
-                        print(self.channels)
-                        completion(true)
                     }
+                    NotificationCenter.default.post(name: NOTIF_CHANNEL_LOADED, object: nil)
+                    completion(true)
                 }else{
                     completion(false)
                     debugPrint(response.result.error as Any)

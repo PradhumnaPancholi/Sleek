@@ -20,8 +20,10 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.revealViewController()?.rearViewRevealWidth = self.view.frame.width - 40
+        // notification observer for user data changed //
         NotificationCenter.default.addObserver(self, selector: #selector(userDataChanged(_:)), name: NOTIF_USR_DATA_CHANGED, object: nil)
-        
+        // notification observer for channels loaded //
+        NotificationCenter.default.addObserver(self, selector: #selector(channelsLoaded(_:)), name: NOTIF_CHANNEL_LOADED, object: nil)
         //to recieve channels continuesly//
         SocketServices.instance.getChannel { (success) in
             if success{
@@ -57,6 +59,10 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //to manage user data when notification post happens//
     @objc func userDataChanged(_ notif: Notification) {
         setUpUserInfo()
+    }
+    //to lopad channels when notification post is triggered //
+    @objc func channelsLoaded(_ notif: Notification) {
+        tableView.reloadData()
     }
     
     //to set user info//

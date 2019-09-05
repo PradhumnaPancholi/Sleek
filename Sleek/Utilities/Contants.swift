@@ -15,7 +15,8 @@ let UNWIND = "Unwind_Seague"
 let TO_Avatar_Picker = "toAvatarPicker"
 
 //notification constants//
-let NOTIF_USR_DATA_CHANGED = Notification.Name("user_data_changed") 
+let NOTIF_USR_DATA_CHANGED = Notification.Name("user_data_changed")
+let NOTIF_CHANNEL_LOADED = Notification.Name("channels_loaded") 
 
 //User Defaults//
 var LOGGED_IN_KEY = "logged in"
