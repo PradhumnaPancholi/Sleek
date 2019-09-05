@@ -68,6 +68,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         else{
             loginBtn.setTitle("Log In", for: .normal)
             userImg.image = UIImage(named: "user")
+            tableView.reloadData()
         }
     }
     

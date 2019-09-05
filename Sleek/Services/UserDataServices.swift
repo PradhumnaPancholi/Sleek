@@ -43,6 +43,7 @@ class UserDataServices {
         avatarColor = ""
         AuthService.instance.authToken = ""
         AuthService.instance.isLoggedin = false
+        MsgServices.instance.cleanChannel()
     }
     
 }

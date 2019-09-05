@@ -11,6 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class MsgServices {
+    
     static let instance = MsgServices()
     
     var channels = [Channel]()
@@ -38,4 +39,10 @@ class MsgServices {
             }
         }
     }
+    
+    //function to clear all channels when user logs out //
+    func cleanChannel() {
+        channels.removeAll()
+    }
+    
 }
