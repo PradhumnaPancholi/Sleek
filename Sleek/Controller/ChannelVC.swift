@@ -17,6 +17,8 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         self.revealViewController()?.rearViewRevealWidth = self.view.frame.width - 40
         NotificationCenter.default.addObserver(self, selector: #selector(userDataChanged(_:)), name: NOTIF_USR_DATA_CHANGED, object: nil)
         
@@ -78,8 +80,8 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "channelCell", for: indexPath) as? ChannelCell {
-           let channel = MsgServices.instance.channels[indexPath.row]
-           cell.configureCell(channel: channel)
+            let channel = MsgServices.instance.channels[indexPath.row]
+            cell.configureCell(channel: channel)
             
            return cell
         }else {
