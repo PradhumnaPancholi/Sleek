@@ -21,7 +21,7 @@ class ChannelCell: UITableViewCell {
     //configure cell/
     func configureCell(channel: Channel) {
         let title = channel.channelTitle ?? ""
-        self.channelTitle.text = title
+        self.channelTitle.text = "# \(title)"
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
