@@ -23,7 +23,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         // notification observer for user data changed //
         NotificationCenter.default.addObserver(self, selector: #selector(userDataChanged(_:)), name: NOTIF_USR_DATA_CHANGED, object: nil)
         // notification observer for channels loaded //
-        NotificationCenter.default.addObserver(self, selector: #selector(channelsLoaded(_:)), name: NOTIF_CHANNEL_LOADED, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(channelsLoaded(_:)), name: NOTIF_CHANNELS_LOADED, object: nil)
         //to recieve channels continuesly//
         SocketServices.instance.getChannel { (success) in
             if success{
@@ -96,6 +96,14 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }else {
             return UITableViewCell()
         }
+    }
+    
+    //to load selected channel on ChatVC //
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedChannel = MsgServices.instance.channels[indexPath.row]
+        MsgServices.instance.selectedChannel = selectedChannel
+        NotificationCenter.default.post(name: NOTIF_CHANNEL_SELECTED, object: nil)
+        self.revealViewController()?.revealToggle(animated: true)
     }
     
 }
