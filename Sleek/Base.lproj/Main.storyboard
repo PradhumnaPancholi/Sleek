@@ -91,6 +91,9 @@
                                 <state key="normal" image="send">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendBtnPressed:" destination="LRE-3j-Xto" eventType="touchUpInside" id="qWN-vZ-TuE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -108,6 +111,7 @@
                     </view>
                     <connections>
                         <outlet property="menuBtn" destination="C3O-1Q-5vj" id="Qb6-jX-I9L"/>
+                        <outlet property="msgTxtBox" destination="XUw-ho-dA6" id="4G4-aq-oyw"/>
                         <outlet property="nameLabel" destination="Nvw-2e-Sga" id="kUJ-wK-UUH"/>
                     </connections>
                 </viewController>

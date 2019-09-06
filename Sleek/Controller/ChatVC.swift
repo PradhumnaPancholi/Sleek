@@ -12,8 +12,9 @@ class ChatVC: UIViewController {
     
     //outlets//
     @IBOutlet weak var menuBtn: UIButton!
-
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var msgTxtBox: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //to use bindToKeyboard//
@@ -86,5 +87,22 @@ class ChatVC: UIViewController {
     //for close keyboard gesture recog//
     @objc func closeKeyboard() {
         view.endEditing(true)
+    }
+    
+    //func to send msg content & implement socket servcices to send message//
+    
+    @IBAction func sendBtnPressed(_ sender: Any) {
+        //check if logged in//
+        if AuthService.instance.isLoggedin {
+            guard let channelId = MsgServices.instance.selectedChannel?.id else { return }
+            guard let msgBody = msgTxtBox.text else { return }
+            SocketServices.instance.sendMessage(messageBody: msgBody, channelId: channelId) { (success) in
+                if success {
+                    //do stuff//
+                    self.msgTxtBox.text = ""
+                    print("Msg Sent")
+                }
+            }
+        }
     }
 }
