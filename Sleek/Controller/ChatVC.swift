@@ -16,7 +16,11 @@ class ChatVC: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //to use bindToKeyboard//
+        view.bindToKeyboard()
+        //tap gesture to close keyboard//
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.closeKeyboard))
+        view.addGestureRecognizer(tap)
         // To make sidebar work with SWReveal and Views.
         menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         //To add "drag" gesture for sidebar//
@@ -77,5 +81,10 @@ class ChatVC: UIViewController {
             //do stuff//
             print("fetched messages")
         }
+    }
+    
+    //for close keyboard gesture recog//
+    @objc func closeKeyboard() {
+        view.endEditing(true)
     }
 }
