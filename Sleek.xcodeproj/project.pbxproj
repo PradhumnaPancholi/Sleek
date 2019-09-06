@@ -18,7 +18,6 @@
 		454817D1222AA7BD006C200B /* UserDataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454817D0222AA7BD006C200B /* UserDataServices.swift */; };
 		4554F131221572BD0042AEE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4554F130221572BD0042AEE7 /* AppDelegate.swift */; };
 		4554F136221572BD0042AEE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4554F134221572BD0042AEE7 /* Main.storyboard */; };
-		4554F138221572BD0042AEE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4554F137221572BD0042AEE7 /* Assets.xcassets */; };
 		4554F13B221572BD0042AEE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4554F139221572BD0042AEE7 /* LaunchScreen.storyboard */; };
 		4567C7C42243D75D00C25603 /* RoundImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567C7C32243D75D00C25603 /* RoundImg.swift */; };
 		45B5BBB2221B7DA0007EA430 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B5BBB1221B7DA0007EA430 /* Contants.swift */; };
@@ -29,6 +28,7 @@
 		9FE3A14C22BED003008B5998 /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FE3A14A22BED003008B5998 /* AddChannelVC.xib */; };
 		9FE3A14E22C18908008B5998 /* SocketServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE3A14D22C18907008B5998 /* SocketServices.swift */; };
 		9FF188D12322DC5B006BC73C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF188D02322DC5B006BC73C /* Message.swift */; };
+		9FF188D32323186B006BC73C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF188D22323186B006BC73C /* Assets.xcassets */; };
 		CA04242F2256221F0011298B /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA04242D2256221F0011298B /* ProfileVC.swift */; };
 		CA0424302256221F0011298B /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA04242E2256221F0011298B /* ProfileVC.xib */; };
 		CA57BCED22851E800053D6A9 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA57BCEC22851E800053D6A9 /* Channel.swift */; };
@@ -49,7 +49,6 @@
 		4554F12D221572BD0042AEE7 /* Sleek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sleek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4554F130221572BD0042AEE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4554F135221572BD0042AEE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4554F137221572BD0042AEE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4554F13A221572BD0042AEE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4554F13C221572BD0042AEE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4567C7C32243D75D00C25603 /* RoundImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImg.swift; sourceTree = "<group>"; };
@@ -63,6 +62,7 @@
 		9FE3A14A22BED003008B5998 /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
 		9FE3A14D22C18907008B5998 /* SocketServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketServices.swift; sourceTree = "<group>"; };
 		9FF188D02322DC5B006BC73C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		9FF188D22323186B006BC73C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8F94C40C59EA88B947D1B8A /* Pods-Sleek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleek.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sleek/Pods-Sleek.release.xcconfig"; sourceTree = "<group>"; };
 		CA04242D2256221F0011298B /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		CA04242E2256221F0011298B /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
@@ -164,8 +164,8 @@
 				45084DA8221703E400196D4B /* Supporting Files */,
 				4554F130221572BD0042AEE7 /* AppDelegate.swift */,
 				4554F134221572BD0042AEE7 /* Main.storyboard */,
-				4554F137221572BD0042AEE7 /* Assets.xcassets */,
 				4554F139221572BD0042AEE7 /* LaunchScreen.storyboard */,
+				9FF188D22323186B006BC73C /* Assets.xcassets */,
 				4554F13C221572BD0042AEE7 /* Info.plist */,
 			);
 			path = Sleek;
@@ -272,8 +272,8 @@
 				9FE3A14C22BED003008B5998 /* AddChannelVC.xib in Resources */,
 				4554F13B221572BD0042AEE7 /* LaunchScreen.storyboard in Resources */,
 				CA0424302256221F0011298B /* ProfileVC.xib in Resources */,
-				4554F138221572BD0042AEE7 /* Assets.xcassets in Resources */,
 				4554F136221572BD0042AEE7 /* Main.storyboard in Resources */,
+				9FF188D32323186B006BC73C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
