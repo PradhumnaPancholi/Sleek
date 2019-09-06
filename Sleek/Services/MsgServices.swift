@@ -15,6 +15,7 @@ class MsgServices {
     static let instance = MsgServices()
     
     var channels = [Channel]()
+    var messages = [Message]()
     var selectedChannel : Channel?
     
     //a function to get all channels//
@@ -39,6 +40,43 @@ class MsgServices {
                 
             }
         }
+    }
+    
+    //func to fetch all messages by channel//
+    func getALLMessages(channelId: String, completion: @escaping CompletionHandler){
+        Alamofire.request("\(GET_ALL_MESSAGES)\(channelId)", method: .post, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
+            
+            if response.result.error == nil {
+                guard let data = response.data else { return }
+                if let json = try! JSON(data: data).array {
+                    for item in json{
+                        self.cleanMessages()
+                        
+                        let id = item["_id"].stringValue
+                        let messageBody = item["messageBody"].stringValue
+                        let channelId = item["channelId"].stringValue
+                        let userName = item["userName"].stringValue
+                        let userAvatarBG = item["userAvatarColor"].stringValue
+                        let userAvatar = item["userAvatar"].stringValue
+                        let timeStamp = item["timeStamp"].stringValue
+                        
+                        let message = Message(id: id, messageBody: messageBody, channelId: channelId, userName: userName, userAvatar: userAvatar, userAvatarBG: userAvatarBG, timeStamp: timeStamp)
+                        
+                        self.messages.append(message)
+                    }
+                    print(self.messages)
+                    completion(true)
+                }
+            }else{
+                debugPrint(response.result.error as Any)
+                completion(false)
+            }
+        }
+    }
+    
+    //func to clear all fetched messages//
+    func cleanMessages() {
+        messages.removeAll()
     }
     
     //function to clear all channels when user logs out //
