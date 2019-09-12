@@ -48,9 +48,9 @@ class MsgServices {
             
             if response.result.error == nil {
                 guard let data = response.data else { return }
+                self.cleanMessages()
                 if let json = try! JSON(data: data).array {
                     for item in json{
-                        self.cleanMessages()
                         
                         let id = item["_id"].stringValue
                         let messageBody = item["messageBody"].stringValue
