@@ -8,15 +8,19 @@
 
 import UIKit
 
-class ChatVC: UIViewController {
+class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //outlets//
     @IBOutlet weak var menuBtn: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var msgTxtBox: UITextField!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //for tableview//
+        tableView.dataSource = self
+        tableView.delegate = self
         //to use bindToKeyboard//
         view.bindToKeyboard()
         //tap gesture to close keyboard//
@@ -73,14 +77,19 @@ class ChatVC: UIViewController {
     func updateWithSelectedChannel(){
         let channelName = MsgServices.instance.selectedChannel?.channelTitle ?? ""
         nameLabel.text = "#\(channelName)"
+        //get msg for selected channel//
+        getMessages()
     }
     
     //func to fetch Messages by channel//
-    func getMessage(){
+    func getMessages(){
         guard let channelId = MsgServices.instance.selectedChannel?.id else { return }
         MsgServices.instance.getALLMessages(channelId: channelId) { (success) in
             //do stuff//
-            print("fetched messages")
+            if success {
+                print("fetched messages")
+                self.tableView.reloadData()
+            }
         }
     }
     
@@ -103,6 +112,24 @@ class ChatVC: UIViewController {
                     print("Msg Sent")
                 }
             }
+        }
+    }
+    
+    //For table view//
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return MsgServices.instance.messages.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as? MessageCell{
+            let message = MsgServices.instance.messages[indexPath.row]
+            cell.configureCell(message: message)
+            return cell
+        }else {
+            return UITableViewCell()
         }
     }
 }

@@ -30,6 +30,7 @@
 		9FF188D12322DC5B006BC73C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF188D02322DC5B006BC73C /* Message.swift */; };
 		9FF188D32323186B006BC73C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF188D22323186B006BC73C /* Assets.xcassets */; };
 		9FF188D523231D7E006BC73C /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF188D423231D7E006BC73C /* KeyboardBoundView.swift */; };
+		9FF188D7232398FB006BC73C /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF188D6232398FB006BC73C /* MessageCell.swift */; };
 		CA04242F2256221F0011298B /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA04242D2256221F0011298B /* ProfileVC.swift */; };
 		CA0424302256221F0011298B /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA04242E2256221F0011298B /* ProfileVC.xib */; };
 		CA57BCED22851E800053D6A9 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA57BCEC22851E800053D6A9 /* Channel.swift */; };
@@ -65,6 +66,7 @@
 		9FF188D02322DC5B006BC73C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		9FF188D22323186B006BC73C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FF188D423231D7E006BC73C /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
+		9FF188D6232398FB006BC73C /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		A8F94C40C59EA88B947D1B8A /* Pods-Sleek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sleek.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sleek/Pods-Sleek.release.xcconfig"; sourceTree = "<group>"; };
 		CA04242D2256221F0011298B /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		CA04242E2256221F0011298B /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				45E88DD8222BD9B200EA230B /* AvatarCell.swift */,
 				4567C7C32243D75D00C25603 /* RoundImg.swift */,
 				2B109CE4228F876100E89AB5 /* ChannelCell.swift */,
+				9FF188D6232398FB006BC73C /* MessageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				CA57BCEF2285208C0053D6A9 /* MsgServices.swift in Sources */,
 				454817D1222AA7BD006C200B /* UserDataServices.swift in Sources */,
 				4554F131221572BD0042AEE7 /* AppDelegate.swift in Sources */,
+				9FF188D7232398FB006BC73C /* MessageCell.swift in Sources */,
 				4567C7C42243D75D00C25603 /* RoundImg.swift in Sources */,
 				45084DAC2217043300196D4B /* SWRevealViewController.m in Sources */,
 				9FE3A14B22BED003008B5998 /* AddChannelVC.swift in Sources */,

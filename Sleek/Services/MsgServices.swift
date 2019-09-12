@@ -44,7 +44,7 @@ class MsgServices {
     
     //func to fetch all messages by channel//
     func getALLMessages(channelId: String, completion: @escaping CompletionHandler){
-        Alamofire.request("\(GET_ALL_MESSAGES)\(channelId)", method: .post, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
+        Alamofire.request("\(GET_ALL_MESSAGES)\(channelId)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
             
             if response.result.error == nil {
                 guard let data = response.data else { return }
@@ -69,6 +69,7 @@ class MsgServices {
                 }
             }else{
                 debugPrint(response.result.error as Any)
+                print("Couldn't fetch messages")
                 completion(false)
             }
         }
