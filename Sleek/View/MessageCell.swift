@@ -11,9 +11,11 @@ import UIKit
 class MessageCell: UITableViewCell {
     
     //outlets//
+    @IBOutlet weak var msgDate: UILabel!
     @IBOutlet weak var userImg: UIImageView!
     @IBOutlet weak var msgBodyLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,6 +29,7 @@ class MessageCell: UITableViewCell {
         userImg.image = UIImage(named: message.userAvatar ?? "ggggg")
         userNameLabel.text = message.userName
         msgBodyLabel.text = message.messageBody
+        msgDate.text = "12:33 am"
     }
 
 }
