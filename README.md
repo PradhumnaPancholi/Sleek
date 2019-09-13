@@ -26,5 +26,4 @@ An iOS Clone for Slack built using modified (self) pre-built [mac-chat-api](http
     2. User Account
 
     SignUp Account Form | User SignUp Avatar Selection | SignUp Accouunt Form filled 
-    :---------------:|:---------------:|:---------------:
 ![Image](./Sleek_Snapshots/SignUp.png) | ![Image](./Sleek_Snapshots/ChooseAvatar.png) | ![Image](./Sleek_Snapshots/LogIn_Filled.png)
