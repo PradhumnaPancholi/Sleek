@@ -41,4 +41,4 @@ An iOS Clone for Slack built using modified (self) pre-built [mac-chat-api](http
 ![Image](./Sleek_Snapshots/Message_View.png)
 
     7. Chat View
-![Image](./Sleek_Snapshots/ChatView.png)
+![Image](./Sleek_Snapshots/Chat_View.png)
