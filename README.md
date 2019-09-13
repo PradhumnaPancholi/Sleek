@@ -1,6 +1,6 @@
 # Sleek
 
-An iOS Clone for Slack built using modified (self) pre-built [mac-chat-api] (https://github.com/PradhumnaPancholi/mac-chat-api) by Devslopes.
+An iOS Clone for Slack built using modified (self) pre-built [mac-chat-api](https://github.com/PradhumnaPancholi/mac-chat-api) by Devslopes.
 
 ## Pods Used
 
@@ -16,3 +16,7 @@ An iOS Clone for Slack built using modified (self) pre-built [mac-chat-api] (htt
     4. User can create new channel (if logged in).
     5. Implementation of sockets so user can see messages and channels as soon as created.
     6. User can send messages to each other on any channel (if logged in).
+
+# Screens
+
+
