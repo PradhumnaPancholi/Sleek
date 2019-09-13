@@ -32,10 +32,10 @@ An iOS Clone for Slack built using modified (self) pre-built [mac-chat-api](http
 ![Image](./Sleek_Snapshots/LogIn_Filled.png)
 
     4. Channels
-![Image](./Sleek_Snapshots/CreateChannel.png)
+![Image](./Sleek_Snapshots/Channels.png)
 
     5. Create Channel
-![Image](./Sleek_Snapshots/Channels.png)
+![Image](./Sleek_Snapshots/CreateChannel.png)
 
     6. Sending Message
 ![Image](./Sleek_Snapshots/Message_View.png)
