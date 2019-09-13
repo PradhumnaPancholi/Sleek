@@ -21,6 +21,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         //for tableview//
         tableView.dataSource = self
         tableView.delegate = self
+        //for row height//  
         //to use bindToKeyboard//
         view.bindToKeyboard()
         //tap gesture to close keyboard//
