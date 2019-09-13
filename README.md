@@ -21,4 +21,4 @@ An iOS Clone for Slack built using modified (self) pre-built [mac-chat-api](http
 
     1. Slider (Built using SWReveal)
 
-    ![alt text](./Sleek_Snapshots/Slider.png)
+    ![Image](./Sleek_Snapshots/Slider.png)
