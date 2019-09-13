@@ -27,3 +27,18 @@ An iOS Clone for Slack built using modified (self) pre-built [mac-chat-api](http
 
     SignUp Account Form | User SignUp Avatar Selection | SignUp Accouunt Form filled 
 ![](./Sleek_Snapshots/SignUp.png)![](./Sleek_Snapshots/ChooseAvatar.png)![](./Sleek_Snapshots/SUF.png)
+
+    3. Login 
+![Image](./Sleek_Snapshots/LogIn_Filled.png)
+
+    4. Channels
+![Image](./Sleek_Snapshots/CreateChannels.png)
+
+    5. Create Channel
+![Image](./Sleek_Snapshots/Channels.png)
+
+    6. Sending Message
+![Image](./Sleek_Snapshots/Message_View.png)
+
+    7. Chat View
+![Image](./Sleek_Snapshots/ChatView.png)
