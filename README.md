@@ -18,6 +18,6 @@ An iOS Clone for Slack built using modified (self) pre-built [mac-chat-api](http
     6. User can send messages to each other on any channel (if logged in).
 
 # Screens
+    1. Slider (Built using SWReveal)
 
-1. Slider (Built using SWReveal)
-    ![Image](./Sleek_Snapshots/Slider.png)
+![Image](./Sleek_Snapshots/Slider.png)
