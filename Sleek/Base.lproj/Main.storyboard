@@ -75,7 +75,6 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="1G5-Xz-AKD" firstAttribute="top" secondItem="pW4-DS-NwV" secondAttribute="top" constant="8" id="2E2-Lb-Lem"/>
                                                 <constraint firstItem="1G5-Xz-AKD" firstAttribute="leading" secondItem="pW4-DS-NwV" secondAttribute="leading" constant="8" id="Afg-l1-Y8l"/>
                                                 <constraint firstItem="xHy-bL-XqJ" firstAttribute="leading" secondItem="1G5-Xz-AKD" secondAttribute="trailing" constant="8" id="Ed8-rw-cFN"/>
                                                 <constraint firstItem="2Sx-uT-RB9" firstAttribute="top" secondItem="pW4-DS-NwV" secondAttribute="topMargin" constant="8" id="HwL-Zr-iNN"/>
@@ -85,6 +84,7 @@
                                                 <constraint firstItem="xHy-bL-XqJ" firstAttribute="top" secondItem="pW4-DS-NwV" secondAttribute="topMargin" constant="8" id="cAS-T0-S7i"/>
                                                 <constraint firstItem="yxy-Fi-UgE" firstAttribute="top" secondItem="xHy-bL-XqJ" secondAttribute="bottom" constant="10" id="coe-MS-jNh"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="yxy-Fi-UgE" secondAttribute="trailing" constant="-1" id="f0Y-O0-JlF"/>
+                                                <constraint firstItem="1G5-Xz-AKD" firstAttribute="centerY" secondItem="pW4-DS-NwV" secondAttribute="centerY" id="lJH-zW-GMw"/>
                                                 <constraint firstAttribute="bottom" secondItem="yxy-Fi-UgE" secondAttribute="bottom" constant="8" id="sSB-ug-mbi"/>
                                             </constraints>
                                         </tableViewCellContentView>
