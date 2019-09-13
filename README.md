@@ -1,6 +1,12 @@
 # Sleek
 
-## An iOS Clone for Slack
+An iOS Clone for Slack built using modified (self) pre-built [mac-chat-api] (https://github.com/PradhumnaPancholi/mac-chat-api) by Devslopes.
+
+## Pods Used
+
+    1. Alamofire
+    2. SwiftyJSON
+    3. SocketIO
 
 ## Key functionalities:-
 
