@@ -21,7 +21,9 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         //for tableview//
         tableView.dataSource = self
         tableView.delegate = self
-        //for row height//  
+        //for row height//
+        tableView.estimatedRowHeight = 80
+        tableView.rowHeight = UITableViewAutomaticDimension
         //to use bindToKeyboard//
         view.bindToKeyboard()
         //tap gesture to close keyboard//
@@ -37,6 +39,18 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.userDataDidChange(_:)), name: NOTIF_USR_DATA_CHANGED, object: nil)
         //Notification observer when user selects a channel//
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.channelSelected(_:)), name: NOTIF_CHANNEL_SELECTED, object: nil)
+        //look for socket emit on "messageCreated" //
+        SocketServices.instance.getMessage { (success) in
+            if (success) {
+                //reload table data on socket emit//
+                self.tableView.reloadData()
+                //to keep message table scrolled upto last message //
+                if MsgServices.instance.messages.count > 0 {
+                    let endIndex = IndexPath(row: MsgServices.instance.messages.count - 1, section: 0)
+                    self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: true)
+                }
+            }
+        }
         //to check and recieve user data if logged in and broadcast the msg with notification//
         if AuthService.instance.isLoggedin {
             AuthService.instance.findUserByEmail { (success) in

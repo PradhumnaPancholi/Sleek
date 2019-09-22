@@ -41,9 +41,9 @@ class SocketServices: NSObject {
     //function to recieve channels//
     func getChannel(completion: @escaping CompletionHandler) {
         socket.on("channelCreated") { (data, ack ) in
-            guard let channelName = data[0] as? String else {return}
-            guard let channelDesc = data[1] as? String else {return}
-            guard let channelID = data[2] as? String else {return}
+            guard let channelName = data[0] as? String else { return }
+            guard let channelDesc = data[1] as? String else { return }
+            guard let channelID = data[2] as? String else { return }
             //creating new channel object//
             let newChannel = Channel(id: channelID, channelTitle: channelName, channelDescription: channelDesc)
             //appending newchannel to channels array//
@@ -57,5 +57,30 @@ class SocketServices: NSObject {
         let user = UserDataServices.instance
         socket.emit("newMessage", messageBody, user.id, channelId, user.name, user.avatarName, user.avatarColor)
         completion(true)
+    }
+    
+    //a func for recieving realtime messages//
+    func getMessage(completion : @escaping CompletionHandler) {
+        socket.on("messageCreated") { (data, ack) in
+            guard let msgBody = data[0] as? String else { return }
+            guard let channelId = data[2] as? String else { return }
+            guard let userName = data[3] as? String else { return }
+            guard let userAvatar = data[4] as? String else { return }
+            guard let userAvatarColor = data[5] as? String else { return }
+            guard let msgId = data[6] as? String else { return }
+            guard let timeStamp = data[7] as? String else { return }
+            
+            //check if channelId is equal to user's current selected channel//
+            if MsgServices.instance.selectedChannel?.id == channelId && AuthService.instance.isLoggedin {
+                //create new message//
+                let newMessage = Message(id: msgId, messageBody: msgBody, channelId: channelId, userName: userName, userAvatar: userAvatar, userAvatarBG: userAvatarColor, timeStamp: timeStamp)
+                //append to msg array//
+                MsgServices.instance.messages.append(newMessage)
+                
+                completion(true)
+            } else {
+                completion(false)
+            }
+        }
     }
 }
