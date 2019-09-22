@@ -15,9 +15,12 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var msgTxtBox: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var sendButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //hide msg send button //
+        sendButton.isHidden = true
         //for tableview//
         tableView.dataSource = self
         tableView.delegate = self
@@ -66,6 +69,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }else{
            //show msg to login //
             nameLabel.text = "Please Log In"
+            self.tableView.reloadData()
         }
     }
     //func to get channels & messages on login //
@@ -111,6 +115,14 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //for close keyboard gesture recog//
     @objc func closeKeyboard() {
         view.endEditing(true)
+    }
+    //to only show send button when there is a message//
+    @IBAction func msgTxtBoxEditing(_ sender: Any) {
+        if (msgTxtBox.text == "") {
+            self.sendButton.isHidden = true
+        } else {
+            self.sendButton.isHidden = false
+        }
     }
     
     //func to send msg content & implement socket servcices to send message//

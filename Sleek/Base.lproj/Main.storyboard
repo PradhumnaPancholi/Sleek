@@ -66,7 +66,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Sx-uT-RB9">
-                                                    <rect key="frame" x="175.5" y="19" width="36" height="21"/>
+                                                    <rect key="frame" x="175.5" y="19" width="36" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -104,6 +104,9 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="msgTxtBoxEditing:" destination="LRE-3j-Xto" eventType="editingChanged" id="cpV-bk-TO8"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GpV-6f-Dre">
                                 <rect key="frame" x="330" y="629.5" width="35" height="35"/>
@@ -135,7 +138,7 @@
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleek" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvw-2e-Sga">
-                                        <rect key="frame" x="157" y="62" width="61" height="33"/>
+                                        <rect key="frame" x="157" y="55" width="61" height="40"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -173,6 +176,7 @@
                         <outlet property="menuBtn" destination="C3O-1Q-5vj" id="Qb6-jX-I9L"/>
                         <outlet property="msgTxtBox" destination="XUw-ho-dA6" id="4G4-aq-oyw"/>
                         <outlet property="nameLabel" destination="Nvw-2e-Sga" id="kUJ-wK-UUH"/>
+                        <outlet property="sendButton" destination="GpV-6f-Dre" id="4B9-Lx-hVE"/>
                         <outlet property="tableView" destination="mbn-bd-d4C" id="EGs-4D-XSS"/>
                     </connections>
                 </viewController>
